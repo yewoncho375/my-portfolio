@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: 'helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .welcome-container {
+            text-align: center;
+        }
+        .welcome-container h1, .welcome-container p {
+            animation: fadeInOut 4s infinite;
+        }
+        .welcome-container h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .welcome-container p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .enter-button {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(250, 158, 187);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: auto;
+            position: relative;
+            top: 120px;
+            animation: fadeInOut 4s infinite;
+            transition: background-color 0.3s ease;
+        }
+        .enter-button::before {
+            content: '→';
+            font-size: 1.5rem;
+            color: white;
+        }
+        .enter-button:hover {
+            background-color: deeppink;
+        }
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>"디자인은 단순히 아름다움이 아니라, 문제 해결과 공감을 위한 도구입니다."</h1>
+        <p>- 폴 랜드 (Paul Rand)</p>
+        <button class="enter-button" onclick="location.href='About.html';"></button>
+    </div>
+</body>
+</html>

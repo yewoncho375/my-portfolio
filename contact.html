@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Design Works</title>
+    <link rel="stylesheet" href="works.css">
+</head>
+<body>
+    <!-- Top-Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="top-bar-right">
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="main-title">Contact</h1>
+        <div class="layout">
+            <!-- 왼쪽 카테고리 섹션 -->
+            <div class="categories-section">
+                <div class="category-with-text">
+                    <a href="graphic.html" class="category" onclick="updateText('E-mail: Send me a message!')">yewoncho375@gmail.com</a>
+                   
+                </div>
+                <div class="category-with-text">
+                    <a href="https://www.instagram.com/odd_archive375/profilecard/?igsh=MXFsazIxMTduMjlyaA==" class="category" onclick="updateText('Instagram: Follow me!')">Instagram</a>
+                  
+                </div>
+                <div class="category-with-text">
+                    <a href="https://www.behance.net/yewoncho375" class="category" onclick="updateText('Behance: See my works!')">Behance</a>
+                    
+                </div>
+            </div>
+
+            <!-- 우측 텍스트 영역 -->
+            <div class="text-section">
+                <p id="contact-text" class="pink-text">클릭하면 해당 페이지로 이동합니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="works.js"></script>
+</body>
+</html>

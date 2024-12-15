@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            overflow-y: auto;
+            transition: background-color 1s ease-out;
+        }
+        .top-bar {
+            background-color: white;
+            color: black;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 10;
+            padding: 0 20px;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .menu a:hover {
+            color: rgb(250, 158, 187);
+        }
+        .content {
+            padding: 120px 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            line-height: 1.8;
+            align-items: flex-start; /* 왼쪽 정렬 */
+            text-align: left;
+        }
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-direction: column;
+        }
+        .profile-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInOut 4s infinite;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+        .fade-effect {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            font-size: 0.4rem; /* 글자 크기 절반으로 설정 */
+        }
+        .highlight-text {
+            font-size: 22pt;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 auto;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+        .quote {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px; /* 위치 조정 */
+        }
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('scroll', () => {
+            const fadeElements = document.querySelectorAll('.fade-effect');
+            const windowHeight = window.innerHeight;
+            fadeElements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                const elementTop = rect.top;
+                if (elementTop < windowHeight) {
+                    const opacity = Math.min((windowHeight - elementTop) / windowHeight, 1);
+                    element.style.opacity = opacity.toFixed(2);
+                } else {
+                    element.style.opacity = '0';
+                }
+            });
+
+            // 백그라운드 색상이 스크롤에 따라 검정에서 사용자 정의 핑크로 변함
+            const body = document.body;
+            const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+
+            // 사용자 정의 핑크 색상 설정 (RGB 값)
+            const pinkR = 250; // Red 값 조정
+            const pinkG = 158; // Green 값 조정
+            const pinkB = 187; // Blue 값 조정
+
+            const currentR = Math.min(scrollPercentage * pinkR, pinkR);
+            const currentG = Math.min(scrollPercentage * pinkG, pinkG);
+            const currentB = Math.min(scrollPercentage * pinkB, pinkB);
+
+            body.style.backgroundColor = `rgb(${currentR}, ${currentG}, ${currentB})`;
+        });
+    </script>
+</head>
+<body>
+    <div class="top-bar">
+        <div>About Me</div>
+        <div class="menu" style="margin-left: auto; margin-right: 40px;">
+            <a href="file:///Users/choyewon/Desktop/디지털퍼블리싱/홈화면디자인파일/index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="content" style="padding-top: 150px;">
+        <h1>브랜딩의 시작과 끝을 함께하겠습니다.</h1>
+        <div class="profile-section">
+            <img src="profile.jpg" alt="My Photo">
+            <div>
+                <p>안녕하세요, 저는 Yewon Cho입니다. 
+                <p>브랜드 디자이너로서 다양한 경험을 쌓아왔으며, 창의적이고 기능적인 디자인을 추구합니다.</p>
+            </div>
+        </div>
+        <h2>주요 경력사항</h2>
+        <ul>
+            <li>2026. 2: 충북대학교 디자인학과 졸업</li>
+            <li>2020. 11: M.A.D.S. Art Gallery 단체전 1회</li>
+            <li>2019. 12: (주)에이블씨엔씨 마케팅 공모전 입상</li>
+        </ul>
+        <h2>디자인 분야</h2>
+        <p>그래픽 디자인, UI/UX 디자인, 브랜딩</p>
+
+        <h2>사용 가능 디자인 툴</h2>
+        <ul>
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Indesign</li>
+            <li>Figma</li>
+            <li>After Effects</li>
+            <li>Blender</li>
+        </ul>
+
+    </div>
+
+    <footer>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+        &copy; 2024 Cho, Ye-Won. All Rights Reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions</title>
+    <link rel="stylesheet" href="works.css">
+</head>
+<body>
+    <!-- Top-Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="exhibitions.html">Exhibitions</a>
+        </div>
+        <div class="top-bar-right">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="works.html">Works</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="main-title">2020</h1>
+        <div class="layout">
+            <!-- 왼쪽 카테고리 섹션 -->
+            <div class="categories-section">
+                <a href="exhibitions.html" class="category graphic-active">M.A.D.S. GALLERY</a>
+               
+            </div>
+
+            <!-- 중앙 이미지 및 설명 섹션 -->
+            <div class="content-section">
+                <!-- 이미지 영역 -->
+                <div class="image-section">
+                    <button class="arrow left" onclick="prevImage()">←</button>
+                    <img id="main-image" src="리플렛.png" alt="Work 1">
+                    <button class="arrow right" onclick="nextImage()">→</button>
+                </div>
+
+                <!-- 설명 영역 -->
+                <div class="description-section">
+                    <p id="description">Work 1: Aesop 브랜드 홍보 리플렛</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="exhibitions.js"></script>
+</body>
+</html>

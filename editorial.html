@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Design Works</title>
+    <link rel="stylesheet" href="works.css">
+</head>
+<body>
+    <!-- Top-Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="about.html">About Me</a>
+        </div>
+        <div class="top-bar-right">
+            <a href="index.html">Home</a>
+            <a href="works.html">Works</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="main-title">Works</h1>
+        <div class="layout">
+            <!-- 왼쪽 카테고리 섹션 -->
+            <div class="categories-section">
+                <a href="works.html" class="category graphic-active">Graphic</a>
+                <a href="editorial.html" class="category" style="color: rgb(250, 158, 187);">Editorial</a> 
+                <a href="package.html" class="category">Package</a>
+                <a href="mg.html" class="category">Motion Graphics</a>
+                <a href="drawing.html" class="category">Drawing</a>
+            </div>
+
+            <!-- 중앙 이미지 및 설명 섹션 -->
+            <div class="content-section">
+                <!-- 이미지 영역 -->
+                <div class="image-section">
+                    <button class="arrow left" onclick="prevImage()">←</button>
+                    <img id="main-image" src="리플렛.png" alt="Work 1">
+                    <button class="arrow right" onclick="nextImage()">→</button>
+                </div>
+
+                <!-- 설명 영역 -->
+                <div class="description-section">
+                    <p id="description">Work 1: Aesop 브랜드 홍보 리플렛</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="editorial.js"></script>
+</body>
+</html>
